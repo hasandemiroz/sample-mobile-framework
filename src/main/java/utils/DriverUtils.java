@@ -11,9 +11,14 @@ public class DriverUtils {
 
     public static void initializeDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/apps/android/androidAPP.apk");
+//        capabilities.setCapability("app", System.getProperty("user.dir") + "/data/app/com.wallet.crypto.trustapp-5UlyxS70YQWnA0QEOg2usA==/base.apk");
+
+        capabilities.setCapability("appPackage", "com.wallet.crypto.trustapp");
+        capabilities.setCapability("appActivity", "com.wallet.crypto.trustapp.ui.app.AppActivity");
+        capabilities.setCapability("noReset", true);
+
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Pixel3A");
+        capabilities.setCapability("deviceName", "988a9b3244504e4e4330");
         capabilities.setCapability("automationName", "UiAutomator2");
 
         try {
